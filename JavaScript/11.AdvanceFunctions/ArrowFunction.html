@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__ArrowFuntion__</title>
+</head>
+<body>
+
+    <script>
+        //1. Anonymous_Function
+        // let sum = function(num1, num2){
+        //     return num1+num2;
+        // }
+         // can also be written as
+
+        let sum = (num1,num2) =>{
+            return num1+num2;
+        }
+
+        document.write(sum(5,7));
+        document.write('<br>');
+
+        // 2.For single argument , round brackets are optional
+
+        // let sqr = (num) => {
+        //     return num*num;
+        // }
+
+        //can be written as
+
+        let sqr = num =>{
+            return num*num;
+        }
+
+        document.write(sqr(5));
+        document.write('<br>');
+
+
+        //3.For single line func, curly braces and return are optional
+
+        // let cube = num =>{
+        //     return num*num*num;
+        // }
+
+        // is similar to
+
+        let cube = num => num*num*num;
+
+        document.write(cube(5));
+        document.write('<br>');
+
+    </script>
+
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__If-Alternatives__</title>
+</head>
+<body>
+    <script>
+        // @ 5:24:00
+        
+        //Ternary Operator
+        let age = 32;
+        let result = age>18 ? 'Adult' : 'Kid';
+        document.write(result);
+        document.write('<br>');
+
+        //Guard Operator
+        // let amt = 17;
+        // let finalAmt = amt || 100;
+        // document.write(amt);
+        // document.write('<br>');
+        // document.write(finalAmt);
+        // document.write('<br>');
+
+        // let amt;
+        // let finalAmt = amt || 100;
+        // document.write(amt);
+        // document.write('<br>');
+        // document.write(finalAmt); //Took amt as falsy value
+        // document.write('<br>');
+
+
+        let amt = 0; // 0 is falsy
+        let finalAmt = amt || 100;
+        document.write(amt);
+        document.write('<br>');
+        document.write(finalAmt); //Took amt=0 as falsy value
+        document.write('<br>');
+
+        // Default Operator
+        // let amount;
+        // let finalAmount = amt ?? 100;
+        // document.write(amount);
+        // document.write('<br>');
+        // document.write(finalAmount); //Took amt as falsy value
+        // document.write('<br>');
+
+
+        let amount = 0; // 0 is not falsy
+        let finalAmount = amt ?? 100;
+        document.write(amt);
+        document.write('<br>');
+        document.write(finalAmt); //Took amt=0 as falsy value
+        document.write('<br>');
+
+
+    </script>
+</body>
+</html>

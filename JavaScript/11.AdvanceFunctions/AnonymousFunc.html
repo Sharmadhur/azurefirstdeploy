@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__Anonymous_Function__</title>
+</head>
+<body>
+    <script>
+        let sum = function(num1,num2){
+            return (num1+num2);
+        }
+
+        document.write(sum(4,5));
+        document.write("<br>");
+
+        // FUnction se function bhi bana sakte hai
+
+        let newSum = sum;
+        document.write(sum(4,5));
+        document.write("<br>");
+
+
+        // Ek aisa func banao jo teen no. ka sum karta ho aisa func ka use karke jo do number ka sum karta ho(sum() jo upper hai).
+        
+        let sum3Numbers = function( num1, num2, num3, sum2Numbers){
+            let sum1 = sum2Numbers(num1, num2);
+            return sum2Numbers(sum1,num3);
+        }
+
+
+        document.write(sum3Numbers(4,5,6,sum));
+        document.write("<br>");
+    </script>
+</body>
+</html>

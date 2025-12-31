@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__PracticeSet_11__</title>
+    <style>
+        .js-normalSize{height: 40px; width:50px;}
+        .js-doubleSize{height: 80px; width:100px;}
+    </style>
+</head>
+<body>
+
+    <button id="my-button" class="js-normalSize">Click Me</button>
+
+    <script>
+        // // Qn.1
+        // let multiply = (n1, n2) => {
+        //     return n1*n2;
+        // }
+        // document.write(multiply(2,3));
+        // document.write('<br>');
+
+        // //Qn.2
+        // let fxn = () => document.write('Hii <br>');
+
+        // let runTwice = fn => {
+        //     let intervalId = setInterval(fn,1000);
+        //     setTimeout( () => clearInterval(intervalId), 2000);
+        // }
+
+        // runTwice(fxn);
+
+        //Qn.3 + Qn.4
+        let buttonElement = document.querySelector('#my-button');
+        
+        buttonElement.addEventListener('click', () => {
+        setTimeout(() => {
+            buttonElement.classList.remove('js-normalSize');
+            buttonElement.classList.add('js-doubleSize');
+        }, 2000); // 2 seconds delay
+        });
+
+        // Qn3 can also be solved as below.
+        // let fnc = () => buttonElement.classList.add('js-changer');
+        // let behaviour = () =>{ 
+        //     setTimeout(fnc,2000);
+        // }
+        // buttonElement.addEventListener('click', behaviour);
+
+
+        // Qn.5
+
+        // let arr = [1,2,3,4,5,6,7,8,9];
+        // let sum = 0;
+
+        // arr.forEach(function(num){
+        //     sum += num;
+        // });
+        // document.write(sum);
+        // document.write('<br>');
+
+        //Qn.6
+        //document.write(arr.map(num => num*num));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__DOM__</title>
+</head>
+<body>
+    
+    <div class="my-div">This is the div.</div>
+
+    <script>
+        // See at 8:12:00
+        // document.location;
+        // document.title;
+        // document.href;
+        // document.domain;
+
+
+        // Creating element(Here a button) through .createElement() 
+        let button = document.createElement('Button');
+        button.innerText = 'Click-Me';
+        // adding that button to the given <div> via .appendChild()
+        document.querySelector('.my-div').appendChild(button);
+
+        // removing recently added button to the given <div> via .removeChild()
+        document.querySelector('.my-div').removeChild(button);
+
+
+        //  showing .replaceChild(), pehlle 2 button add kare , phir replace karunga
+
+
+        let button1 = document.createElement('Button');
+        button1.innerText = 'Click-I';
+        let button2 = document.createElement('Button');
+        button2.innerText = 'Knock-Me';
+        
+        document.querySelector('.my-div').appendChild(button1);
+        document.querySelector('.my-div').appendChild(button2);
+           // replacing button1 with button2
+        document.querySelector('.my-div').replaceChild(button2, button1);
+
+        
+    </script>
+</body>
+</html>

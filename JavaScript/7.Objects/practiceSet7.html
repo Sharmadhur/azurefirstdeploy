@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>__PracticeSet7__</title>
+</head>
+<body>
+
+
+    <script>
+        // Qn.1
+        let productMyntra = {
+            Name: 'Jeans',
+            Fabric: 'Polyster',
+            Size: 30,
+            Rate: 1800,
+            'delivery-time': 'Same Day delivery',
+        };
+
+        // Qn.2
+        let p = { name: 'hi',};
+        let q = p;
+
+        document.write(` p = ${p.name} and q = ${q.name}`);
+        document.write(`<br>`);
+        p.name = 'bye';
+        document.write(` p = ${p.name} and q = ${q.name}`);
+        document.write(`<br>`);
+
+        // Qn.3
+        document.write( productMyntra['delivery-time']);
+        document.write('<br>');
+        
+        // Qn.4
+        let obj = {
+            message: 'good job',
+            status: 'complete',
+        };
+
+        let{ message, status } = obj;
+        document.write(message);
+        document.write('<br>');
+        document.write(status);
+        document.write('<br>');
+
+        // Qn.5
+
+        let product1 = {
+            Name: 'Jeans',
+            Fabric: 'Polyster',
+            Size: 32,
+            Rate: 1900,
+            'delivery-time': 'Same Day delivery',
+        };
+
+        let product2 = {
+            Name: 'Jeans',
+            Fabric: 'Polyster',
+            Size: 30,
+            Rate: 1800,
+            'delivery-time': 'Same Day delivery',
+        };
+
+
+        function isIdenticalProduct( product1,product2 ){
+            if( typeof product1 !== 'object' || typeof product2 !== 'object'){
+                document.write('Parameter passed was not an object');
+                return false;
+            }
+
+            if( product1 == product2){
+                return true; // Checking references
+            }
+
+            if( product1.Name === product2.Name &&
+                product1.Fabric === product2.Fabric &&
+                product1.Size === product2.Size &&
+                product1.Rate === product2.Rate ){
+                    return true;
+                }
+            else{
+                return false;
+            }
+        }
+
+        document.write( isIdenticalProduct(product1, product2));
+        document.write('<br>');
+        document.write( isIdenticalProduct(product1, ''));
+        document.write('<br>');
+        document.write( isIdenticalProduct(product1, product1));
+        document.write('<br>');
+
+    </script>
+</body>
+</html>

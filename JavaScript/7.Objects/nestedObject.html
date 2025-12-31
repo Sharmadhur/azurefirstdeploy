@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__Nested_Object__</title>
+</head>
+<body>
+    
+
+    <script>
+        let product = {
+            company: 'Mango',
+            itemName: 'Cotton stripped t-shirt',
+            price: 861,
+
+            rating: {
+                stars: 4.5,
+                noOfReviews: 87
+            },
+
+            displayPrice: function(){
+                // document.write(`Price of the product is Rs.${product.price}`) 
+                document.write(`Price of the product is Rs.${this.price}`) 
+            },
+        };
+
+
+        product.displayPrice();
+        document.write('<br>');
+        document.write(product.rating.stars);
+    </script>
+</body>
+</html>

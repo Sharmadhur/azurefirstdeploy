@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>__PracticeSet8__</title>
+
+    <style>
+        .js-odd{background-color: chocolate;}
+
+        .js-even{background-color: lawngreen;}
+    </style>
+  </head>
+  <body>
+    <h3 id="greeting"></h3>
+
+    <button id="my-button" onclick="buttonPressed();">0</button>
+
+    <script>
+
+        // Qn1 and Qn2
+      function doGreeting(name='Pappu') {
+        let date = new Date();
+        let hours = date.getHours();
+
+        let heading = document.querySelector("#greeting");
+
+        if (hours >= 5 && hours < 12) {
+          heading.innerText = `Good Morning ${name}`;
+        } else if (hours >= 12 && hours < 18) {
+          heading.innerText = `Good Afternoon ${name}`;
+        } else {
+          heading.innerText = `Good Night ${name}`;
+        }
+      }
+
+      doGreeting('Hema Malini !');
+
+
+    //   ---------------------------------------------------
+
+    // Qn3
+    let noOfTimesClicked = 0;
+    let storedClick = localStorage.getItem('click');
+
+    if( storedClick !== null){
+        noOfTimesClicked = JSON.parse(storedClick).times;
+    }
+
+    function buttonPressed(){
+        noOfTimesClicked ++;
+
+        // SAVE updated value
+        localStorage.setItem('click', JSON.stringify({times: noOfTimesClicked}));
+
+        updateButton();
+    }
+
+    function updateButton(){
+        let button = document.querySelector('#my-button');
+
+        if(noOfTimesClicked % 2 == 0){
+            button.classList.remove('js-odd');
+            button.classList.add('js-even');
+        }
+        else{
+            button.classList.remove('js-even');
+            button.classList.add('js-odd');
+        }
+        button.innerText = noOfTimesClicked;
+    }
+// Initial UI update.
+    updateButton();
+
+    
+      
+    </script>
+  </body>
+</html>

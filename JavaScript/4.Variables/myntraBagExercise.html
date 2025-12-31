@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_Myntra Bag_</title>
+
+    <style>
+        
+
+        #b1{
+            background-color: lightgreen;
+            color: black;
+            padding: 2px 15px 2px 15px;
+            border: #ffffff 2px solid;
+            border-radius: 10px;
+        }
+
+        #b2{
+            text-transform: uppercase;
+            background-color: rgba(128, 128, 128, 0.078);
+            color: black;
+            padding: 3px 25px 3px 25px;
+            border: black 2px solid;
+            border-radius: 7px;
+        }
+
+        
+        #b3{
+            background-color: lightgreen;
+            color: black;
+            padding: 2px 15px 2px 15px;
+            border: #ffffff 2px solid;
+            border-radius: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>My Bag</h1>
+    <main>
+
+        
+
+        <button id="b1" onclick="cartQty += 1;document.querySelector('#cart-summary').innerText=`Your bag has ${cartQty} items`;">Add To Bag</button>
+
+        <button id="b2" onclick="cartQty -= 1;document.querySelector('#cart-summary').innerText=`Your bag has ${cartQty} items`;">Move To Wishlist</button>
+
+        <button id="b3" onclick="cartQty += 2;document.querySelector('#cart-summary').innerText=`Your bag has ${cartQty} items`;">Add 1+1 sale item</button>
+
+        <h1 id="cart-summary"></h1>
+
+
+    </main>
+    
+
+
+    <script>
+        let cartQty=0;
+        document.querySelector('#cart-summary').innerText=`Your bag has ${cartQty} items`;
+        // document.querySelector('#cart-summary').innerText='Your bag has '+cartQty+' items';
+    </script>
+</body>
+</html>

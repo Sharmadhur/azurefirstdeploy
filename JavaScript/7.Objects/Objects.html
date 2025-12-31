@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> __Objects__ </title>
+</head>
+<body>
+    
+
+    <script>
+        let product = {
+            company: 'Mango',
+            price: 861,
+            item_name: 'T-Shirt',
+            'item-name': 'Skirt',  // Sirf Method 2 se access hoga. 
+        };
+
+        // Method 1 to access.
+        // document.write(product.company);
+        // document.write('<br>');
+        // document.write(product.price);
+        // document.write('<br>');
+        // document.write(product.item_name);
+        // document.write('<br>');
+        // product.company = 'Apple'; // Values can be changed.
+        // document.write(product.company);
+        // document.write('<br>');
+        
+
+        // Method 2 to access.
+        document.write(product['company']);
+        document.write('<br>');
+        document.write(product['price']);
+        document.write('<br>');
+        document.write(product['item_name']);
+        document.write('<br>');
+        product.company = 'Apple'; // Values can be changed.
+        document.write(product['company']);
+        document.write('<br>');
+        document.write(product['item-name']);
+        document.write('<br>');
+
+
+        // Deleting property
+        delete product.company;
+        document.write(product.company);
+
+        
+    </script>
+</body>
+</html>

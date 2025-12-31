@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout_setInterval</title>
+</head>
+<body>
+    <script>
+        
+        let alarm = () => document.write(`Subah ho gayi, uth jaooo. ${new Date()} <br>`);
+    
+        //let timerId = setTimeout(alarm,5000); //in msec.
+        //document.write(`Alarm about to ring with timerId: ${timerId}!!!`);
+        // clearTimeout(timerId); , this ends the function before timeout immediately
+
+        let intervalId = setInterval(alarm,1000);
+        setTimeout( () => clearInterval(intervalId), 5000);
+        
+
+        // clearInterval() = rokta hai , upper func ke under likha hai.
+
+
+    </script>
+</body>
+</html>

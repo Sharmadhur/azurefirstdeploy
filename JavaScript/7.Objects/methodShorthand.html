@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_MethodShorthand_</title>
+</head>
+<body>
+    
+    <script>
+        // let product = {
+        //     company: 'Mango',
+        //     itemName: 'Cotton stripped t-shirt',
+        //     price: 861,
+
+        //     rating: {
+        //         stars: 4.5,
+        //         noOfReviews: 87
+        //     },
+
+        //     displayPrice: function(){
+        //         // document.write(`Price of the product is Rs.${product.price}`) 
+        //         document.write(`Price of the product is Rs.${this.price}`) 
+        //     },
+        // };
+
+// is same as
+
+        let product = {
+            company: 'Mango',
+            itemName: 'Cotton stripped t-shirt',
+            price: 861,
+
+            rating: {
+                stars: 4.5,
+                noOfReviews: 87
+            },
+
+            displayPrice() { // "function" keyword likhne ki jaroort nahi.
+                document.write(`Price of the product is Rs.${this.price}`) 
+            },
+        };
+
+    </script>
+</body>
+</html>

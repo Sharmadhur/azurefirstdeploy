@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__LOCALstorage__</title>
+</head>
+<body>
+    
+    <script>
+
+        // localStorage = Permanent Storage in Browser.
+        localStorage.setItem('Name', 'KG Coding');
+        localStorage.setItem('Price', '899');
+        localStorage.setItem('item','Jeans');
+        localStorage.setItem('Company','Levis');
+
+
+        console.log(localStorage.getItem('Company'));
+
+        let product = {
+            name: 'TShirt',
+            price: 789,
+            rating: {
+                stars: 4.5,
+                noOfReviews: 456,
+            },
+        };
+
+        localStorage.setItem('product', JSON.stringify(product));// if won't convert into string , garbage value will be stored
+        console.log(localStorage.getItem('product'));
+
+        let product2 = JSON.parse(localStorage.getItem('product'));
+        console.log(product2);
+
+        // To remove
+        localStorage.removeItem('itm');
+
+        // To remove everything from localStorage.
+        localStorage.clear();
+
+        
+        
+
+
+    </script>
+</body>
+</html>
