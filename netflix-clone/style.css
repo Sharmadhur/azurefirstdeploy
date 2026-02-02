@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #111;
+}
+
+.logo {
+    width: 120px;
+}
+
+.banner {
+    background-image: url("https://image.tmdb.org/t/p/original/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg");
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    margin-left: 30px;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+}
+
+.banner-content button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.row {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.row-posters {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.row-posters img {
+    width: 200px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.row-posters img:hover {
+    transform: scale(1.08);
+}
